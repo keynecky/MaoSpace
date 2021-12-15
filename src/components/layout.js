@@ -24,8 +24,8 @@ const Layout = ({ pageTitle, children }) => {
     <div className={container}>
       <title>{pageTitle}</title>
       <header style={{
-        marginTop:50,
-        width:800,
+        marginTop: 50,
+        width: 800,
       }}>
         <Link to="/" className={siteTitle}>
           MaoSpace
@@ -42,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
             </Link>
           </li>
           <li className={navLinkItem}>
-          <Link to="/posts" className={navLinkText}>
+            <Link to="/posts" className={navLinkText}>
               Posts
             </Link>
           </li>
@@ -58,10 +58,10 @@ const Layout = ({ pageTitle, children }) => {
         {children}
       </main>
       <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      </footer>
     </div>
   )
 }
