@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2021-10-16"
-description: "This is my first post on my personal website! I built my website using Gatsby which is really friendly for a newbie to get started. ..."
+# description: "This is my first post on my personal website! I built my website using Gatsby which is really friendly for a newbie to get started. ..."
 ---
 Hello world!
 

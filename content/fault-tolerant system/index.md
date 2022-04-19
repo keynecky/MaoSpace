@@ -1,7 +1,7 @@
 ---
 title: Paper summary of Fault-Tolerant Virtual Machines
 date: "2021-12-11"
-descipption: "Paper summery of Fault-Tolerant Virtual Machines."
+# description: "Paper summery of Fault-Tolerant Virtual Machines."
 ---
 
 ## 1. What is FTVM 

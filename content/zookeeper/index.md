@@ -1,7 +1,7 @@
 ---
 title: Paper summary of ZooKeeper
 date: "2021-12-07"
-descipption: "Paper summery of ZooKeeper."
+# description: "Paper summery of ZooKeeper."
 ---
 ## 1. What is ZooKeeper 
 
@@ -13,7 +13,7 @@ Just as the paper[1] said, ZooKeeper is a ___wait-free___ coordination service w
 
 #### File System-like
 
-ZooKeeper constructs the hierachical name sapce using uses the standard *UNIX* notation for file system paths (Figure 1). ___The data model of ZooKeeper is essentially a file system with some APIs.___ However, ZooKeeper only stores meta-data for coordination service instead of general data in a certain structure, calls **Z-Node**.
+ZooKeeper constructs the hierachical name sapce using the standard *UNIX* notation for file system paths (Figure 1). ___The data model of ZooKeeper is essentially a file system with some APIs.___ However, ZooKeeper only stores meta-data for coordination service instead of general data in a certain structure, calls **Z-Node**.
 
 ![ZooKeeper namespace](./zookeeper_namespace.png)
 <p style="text-align: center;">Figure 1: ZooKeeper hierarchical name space. Adapted from [1].</p>
@@ -26,6 +26,7 @@ Clients can create Z-Node in ZooKeeper which clients will interact with.
 * **Sequential**: Additionally, clients could create a new znode with a sequential flag set. Nodes created with the sequential flag set have the value of a **monotonically increasing** counter appended to its name. The sequential flag makes all nodes under one parent node sorted with their created time.
 
 #### Watch Mechanism
+
 The read request could using watch for possible update in the future. The write request may trigger the notification of all clients related.
 
 **Wait for update**: ZooKeeper uses a watch mechanism to enable clients to cache data without managing the client cache directly. With this mechanism, a client can watch for an update to a given data object by sending request with a watch flag set, and receive a notification upon an update. Obviously, watch mechanism works for the read request. 
